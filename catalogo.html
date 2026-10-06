@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo · Surco</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor encabezado__barra">
+      <a class="logo" href="index.html">Surco<span>.</span></a>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a class="activo" href="catalogo.html" aria-current="page">Catálogo</a></li>
+          <li><a href="disco.html">Disco del mes</a></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="cinta">Discos nuevos y usados · Café de origen · Música en vivo cada viernes</p>
+  </header>
+
+  <main>
+    <section class="cabecera">
+      <div class="contenedor">
+        <h1>Catálogo</h1>
+        <p>Más de 4.000 discos entre nuevos y usados. Aquí tienes una muestra; lo demás está en las cajas de la tienda.</p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor catalogo">
+        <aside class="filtros">
+          <div>
+            <h3>Género</h3>
+            <ul>
+              <li class="activo"><a href="#">Todos</a><span>9</span></li>
+              <li><a href="#">Rock</a><span>2</span></li>
+              <li><a href="#">Andina</a><span>2</span></li>
+              <li><a href="#">Fusión</a><span>2</span></li>
+              <li><a href="#">Salsa</a><span>1</span></li>
+              <li><a href="#">Electrónica</a><span>1</span></li>
+              <li><a href="#">Lo-fi</a><span>1</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Estado</h3>
+            <ul>
+              <li><a href="#">Nuevo</a><span>6</span></li>
+              <li><a href="#">Usado</a><span>3</span></li>
+            </ul>
+          </div>
+        </aside>
+
+        <div class="resultados">
+          <div class="resultados__barra">
+            <p>Mostrando 9 discos</p>
+            <p>Ordenar: Más recientes</p>
+          </div>
+          <div class="discos discos--3">
+          <article class="disco">
+            <a href="disco.html"><img src="imagenes/tinto-doble.jpg" alt="Portada de Tinto doble de Los Cafeteros del Ruido" width="400" height="400"></a>
+            <div class="disco__info">
+              <div>
+                <h3 class="disco__titulo">Tinto doble</h3>
+                <p class="disco__artista">Los Cafeteros del Ruido</p>
+              </div>
+              <p class="disco__precio">$120.000</p>
+            </div>
+          </article>
+          <article class="disco">
+            <a href="disco.html"><img src="imagenes/pacifico-electrico.jpg" alt="Portada de Pacífico eléctrico de Marimba Norte" width="400" height="400"></a>
+            <div class="disco__info">
+              <div>
+                <h3 class="disco__titulo">Pacífico eléctrico</h3>
+                <p class="disco__artista">Marimba Norte</p>
+              </div>
+              <p class="disco__precio">$135.000</p>
+            </div>
+          </article>
+          <article class="disco">
+            <a href="disco.html"><img src="imagenes/andina-nocturna.jpg" alt="Portada de Andina nocturna de La Bandola Rota" width="400" height="400"></a>
+            <div class="disco__info">
+              <div>
+                <h3 class="disco__titulo">Andina nocturna</h3>
+                <p class="disco__artista">La Bandola Rota</p>
+              </div>
+              <p class="disco__precio">$98.000</p>
+            </div>
+          </article>
+          <article class="disco">
+            <a href="disco.html"><img src="imagenes/salento-5am.jpg" alt="Portada de Salento 5 a.m. de Neblina" width="400" height="400"></a>
+            <div class="disco__info">
+              <div>
+                <h3 class="disco__titulo">Salento 5 a.m.</h3>
+                <p class="disco__artista">Neblina</p>
+              </div>
+              <p class="disco__precio">$110.000</p>
+            </div>
+          </article>
+          <article class="disco">
+            <a href="disco.html"><img src="imagenes/descarga-calarca.jpg" alt="Portada de Descarga en Calarcá de Chucho Salsa Club" width="400" height="400"></a>
+            <div class="disco__info">
+              <div>
+                <h3 class="disco__titulo">Descarga en Calarcá</h3>
+                <p class="disco__artista">Chucho Salsa Club</p>
+              </div>
+              <p class="disco__precio">$145.000</p>
+            </div>
+          </article>
+          <article class="disco">
+            <a href="disco.html"><img src="imagenes/bambu-fm.jpg" alt="Portada de Bambú FM de Sonido Guadua" width="400" height="400"></a>
+            <div class="disco__info">
+              <div>
+                <h3 class="disco__titulo">Bambú FM</h3>
+                <p class="disco__artista">Sonido Guadua</p>
+              </div>
+              <p class="disco__precio">$105.000</p>
+            </div>
+          </article>
+          <article class="disco">
+            <a href="disco.html"><img src="imagenes/cuerdas-de-barro.jpg" alt="Portada de Cuerdas de barro de Las Hermanas Tiple" width="400" height="400"></a>
+            <div class="disco__info">
+              <div>
+                <h3 class="disco__titulo">Cuerdas de barro</h3>
+                <p class="disco__artista">Las Hermanas Tiple</p>
+              </div>
+              <p class="disco__precio">$92.000</p>
+            </div>
+          </article>
+          <article class="disco">
+            <a href="disco.html"><img src="imagenes/ruta-29.jpg" alt="Portada de Ruta 29 de Motel Quimbaya" width="400" height="400"></a>
+            <div class="disco__info">
+              <div>
+                <h3 class="disco__titulo">Ruta 29</h3>
+                <p class="disco__artista">Motel Quimbaya</p>
+              </div>
+              <p class="disco__precio">$115.000</p>
+            </div>
+          </article>
+          <article class="disco">
+            <a href="disco.html"><img src="imagenes/marea-alta.jpg" alt="Portada de Marea alta de Currulao 3000" width="400" height="400"></a>
+            <div class="disco__info">
+              <div>
+                <h3 class="disco__titulo">Marea alta</h3>
+                <p class="disco__artista">Currulao 3000</p>
+              </div>
+              <p class="disco__precio">$128.000</p>
+            </div>
+          </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
