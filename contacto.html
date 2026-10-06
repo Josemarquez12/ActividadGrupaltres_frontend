@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto · Surco</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor encabezado__barra">
+      <a class="logo" href="index.html">Surco<span>.</span></a>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="disco.html">Disco del mes</a></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a class="activo" href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="cinta">Discos nuevos y usados · Café de origen · Música en vivo cada viernes</p>
+  </header>
+
+  <main>
+    <section class="cabecera">
+      <div class="contenedor">
+        <h1>Contacto</h1>
+        <p>¿Buscas un disco en particular o quieres vendernos tu colección? Escríbenos.</p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor contacto">
+        <form class="formulario" action="#" method="post">
+          <div class="fila-campos">
+            <div class="campo">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+            </div>
+            <div class="campo">
+              <label for="celular">Celular</label>
+              <input type="tel" id="celular" name="celular" autocomplete="tel">
+            </div>
+          </div>
+          <div class="campo">
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" autocomplete="email" required>
+          </div>
+          <div class="campo">
+            <label for="motivo">¿En qué te ayudamos?</label>
+            <select id="motivo" name="motivo">
+              <option>Busco un disco</option>
+              <option>Quiero vender mi colección</option>
+              <option>Reservar una mesa</option>
+              <option>Otra cosa</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje"></textarea>
+          </div>
+          <button class="boton" type="submit">Enviar</button>
+        </form>
+
+        <div class="contacto__info">
+          <div class="mapa">
+            <img src="imagenes/mapa.jpg" alt="Mapa: Surco queda sobre la Carrera 14, en el centro de Armenia" width="800" height="600">
+          </div>
+          <h3>Dirección</h3>
+          <p>Carrera 14 #18-32, Centro<br>Armenia, Quindío</p>
+          <h3>Horario</h3>
+          <ul class="lista-precios">
+            <li><span>Lunes a jueves</span><span>10:00 – 19:00</span></li>
+            <li><span>Viernes y sábado</span><span>10:00 – 23:00</span></li>
+            <li><span>Domingo</span><span>10:00 – 15:00</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
