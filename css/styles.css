@@ -1,0 +1,974 @@
+/* =========================================================
+   SURCO · Discos & Café
+   Hoja de estilos Mobile First:
+   - Estilos base = celular
+   - min-width: 601px  → tablet
+   - min-width: 901px  → escritorio
+   ========================================================= */
+
+:root {
+  --papel: #f2ebdd;
+  --papel-oscuro: #e6dcc8;
+  --tinta: #1c1a17;
+  --gris: #6b645a;
+  --rojo: #d6402b;
+  --mostaza: #e0a526;
+
+  --borde: 2px solid var(--tinta);
+  --titulos: "Anton", Impact, sans-serif;
+  --texto: "Work Sans", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: var(--texto);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--titulos);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 38px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.rojo {
+  color: var(--rojo);
+}
+
+/* Antetítulo */
+.antetitulo {
+  margin-bottom: 12px;
+  color: var(--rojo);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Botones */
+.boton {
+  display: inline-block;
+  padding: 14px 22px;
+  border: var(--borde);
+  background: var(--tinta);
+  color: var(--papel);
+  font-family: var(--texto);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.boton:hover {
+  background: var(--rojo);
+  border-color: var(--rojo);
+  color: var(--papel);
+}
+
+.boton--claro {
+  background: transparent;
+  color: var(--tinta);
+}
+
+.boton--chico {
+  padding: 10px 22px;
+  font-size: 13px;
+}
+
+.enlace-flecha {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.enlace-flecha:hover {
+  color: var(--rojo);
+}
+
+/*Encabezado y navegación*/
+.encabezado__barra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 18px;
+  padding-bottom: 14px;
+}
+
+.logo {
+  font-family: var(--titulos);
+  font-size: 34px;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.logo span {
+  color: var(--rojo);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 18px;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 4px 0;
+  border-bottom: 3px solid transparent;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menu a:hover,
+.menu a.activo {
+  color: var(--rojo);
+}
+
+.menu a.activo {
+  border-bottom-color: var(--rojo);
+}
+
+.cinta {
+  padding: 8px 10px;
+  background: var(--tinta);
+  color: var(--papel);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*Secciones genéricas*/
+.seccion {
+  padding: 60px 0;
+}
+
+.seccion--sin-arriba {
+  padding-top: 0;
+}
+
+.seccion--linea {
+  border-top: var(--borde);
+}
+
+.seccion__cabeza {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+/* Cabecera de páginas internas */
+.cabecera {
+  padding: 50px 0 40px;
+  border-bottom: var(--borde);
+}
+
+.cabecera p {
+  max-width: 500px;
+  margin-top: 6px;
+  color: var(--gris);
+  font-size: 18px;
+}
+
+/*Inicio · Hero*/
+.hero {
+  display: grid;
+  gap: 40px;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.hero h1 {
+  font-size: 54px;
+}
+
+.hero__texto > p {
+  margin: 20px 0 30px;
+  font-size: 18px;
+}
+
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/*Tarjetas de disco*/
+.discos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 20px;
+}
+
+.disco a {
+  display: block;
+}
+
+.disco img {
+  width: 100%;
+  border: var(--borde);
+  transition: transform 0.2s;
+}
+
+.disco a:hover img {
+  transform: translateY(-4px);
+}
+
+.disco__info {
+  margin-top: 12px;
+  line-height: 1.4;
+}
+
+.disco__titulo {
+  font-family: var(--texto);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.disco__artista {
+  color: var(--gris);
+  font-size: 14px;
+}
+
+.disco__precio {
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/*Inicio · Café*/
+.cafe {
+  display: grid;
+  border: var(--borde);
+}
+
+.cafe__intro {
+  padding: 40px 24px;
+  background: var(--tinta);
+  color: var(--papel);
+}
+
+.cafe__intro h2 {
+  margin-bottom: 20px;
+}
+
+.cafe__intro p {
+  margin-bottom: 30px;
+}
+
+.cafe__intro .boton {
+  border-color: var(--papel);
+  color: var(--papel);
+}
+
+.cafe__intro .boton:hover {
+  border-color: var(--rojo);
+}
+
+.cafe__carta {
+  padding: 40px 24px;
+}
+
+.cafe__carta h3 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.lista-precios li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--gris);
+  font-weight: 700;
+}
+
+/*Eventos (inicio y agenda)*/
+.eventos {
+  border-top: var(--borde);
+}
+
+.evento {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-areas:
+    "fecha info"
+    "fecha accion";
+  gap: 16px 20px;
+  padding: 26px 0;
+  border-bottom: var(--borde);
+}
+
+.evento__fecha {
+  grid-area: fecha;
+  font-family: var(--titulos);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.evento__fecha strong {
+  display: block;
+  font-size: 42px;
+  font-weight: 400;
+}
+
+.evento__fecha span {
+  font-size: 20px;
+}
+
+.evento__info {
+  grid-area: info;
+}
+
+.evento__info h3 {
+  font-size: 26px;
+}
+
+.evento__info p {
+  margin-top: 4px;
+  color: var(--gris);
+}
+
+.evento__accion {
+  grid-area: accion;
+  justify-self: start;
+}
+
+/* Agenda · concierto destacado */
+.destacado {
+  display: grid;
+  border: var(--borde);
+}
+
+.destacado__afiche img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.destacado__texto {
+  padding: 30px 24px;
+}
+
+.destacado__texto h2 {
+  margin-bottom: 20px;
+}
+
+.destacado__texto > p {
+  margin-bottom: 24px;
+}
+
+/* Tabla de datos (agenda y disco del mes) */
+.datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 30px;
+  border: var(--borde);
+}
+
+.datos div {
+  padding: 12px 14px;
+}
+
+.datos div:nth-child(odd) {
+  border-right: var(--borde);
+}
+
+.datos div:nth-child(-n + 2) {
+  border-bottom: var(--borde);
+}
+
+.datos dt {
+  color: var(--gris);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.datos dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+/*Catálogo*/
+.catalogo {
+  display: grid;
+  gap: 50px;
+}
+
+.filtros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+  align-content: start;
+}
+
+.filtros h3 {
+  margin-bottom: 14px;
+  font-size: 24px;
+}
+
+.filtros li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--papel-oscuro);
+  font-weight: 700;
+}
+
+.filtros a {
+  text-decoration: none;
+}
+
+.filtros a:hover,
+.filtros .activo {
+  color: var(--rojo);
+}
+
+.resultados__barra {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding-bottom: 14px;
+  border-bottom: var(--borde);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/*Disco del mes*/
+.ficha {
+  display: grid;
+  gap: 40px;
+}
+
+.ficha__portada img {
+  width: 100%;
+  border: var(--borde);
+}
+
+.ficha__artista {
+  margin-top: 6px;
+  font-size: 20px;
+}
+
+.ficha__precio {
+  margin: 30px 0 24px;
+  color: var(--rojo);
+  font-family: var(--titulos);
+  font-size: 44px;
+  line-height: 1;
+}
+
+.ficha__descripcion {
+  margin-bottom: 30px;
+}
+
+.ficha .boton {
+  margin-bottom: 30px;
+}
+
+.ficha h3 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.canciones {
+  margin-bottom: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.canciones li {
+  display: flex;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--papel-oscuro);
+  font-weight: 700;
+}
+
+.canciones .num {
+  width: 22px;
+  color: var(--rojo);
+}
+
+.canciones .duracion {
+  margin-left: auto;
+  color: var(--gris);
+}
+
+/*Nosotros*/
+.historia {
+  display: grid;
+  gap: 40px;
+}
+
+.historia__lead {
+  font-size: 26px;
+  line-height: 1.5;
+}
+
+.historia__texto p + p {
+  margin-top: 16px;
+}
+
+.cifras {
+  display: grid;
+  margin-top: 60px;
+  border-top: var(--borde);
+  border-bottom: var(--borde);
+}
+
+.cifra {
+  padding: 30px 20px;
+}
+
+.cifra + .cifra {
+  border-top: var(--borde);
+}
+
+.cifra strong {
+  display: block;
+  color: var(--rojo);
+  font-family: var(--titulos);
+  font-size: 62px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.equipo {
+  display: grid;
+  gap: 30px;
+}
+
+.persona {
+  padding: 26px;
+  border: var(--borde);
+}
+
+.persona img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 20px;
+  border: var(--borde);
+  border-radius: 50%;
+}
+
+.persona h3 {
+  font-size: 30px;
+}
+
+.persona__rol {
+  color: var(--gris);
+}
+
+.persona__recomienda {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--gris);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.persona__recomienda span {
+  display: block;
+  color: var(--rojo);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/*Contacto*/
+.contacto {
+  display: grid;
+  gap: 50px;
+}
+
+.formulario {
+  display: grid;
+  gap: 24px;
+  align-content: start;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: var(--borde);
+  border-radius: 0;
+  background: transparent;
+  color: var(--tinta);
+  font-family: var(--texto);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.campo input,
+.campo select {
+  height: 48px;
+}
+
+.campo textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: 2px solid var(--rojo);
+  outline-offset: 2px;
+}
+
+.fila-campos {
+  display: grid;
+  gap: 24px;
+}
+
+.formulario .boton {
+  justify-self: start;
+}
+
+.mapa img {
+  width: 100%;
+  border: var(--borde);
+}
+
+.contacto__info h3 {
+  margin: 30px 0 10px;
+  font-size: 30px;
+}
+
+.contacto__info .lista-precios li {
+  padding: 14px 0;
+}
+
+/*Pie de página*/
+.pie {
+  padding: 60px 0 30px;
+  background: var(--tinta);
+  color: var(--papel);
+}
+
+.pie__grid {
+  display: grid;
+  gap: 40px;
+}
+
+.pie .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 60px;
+}
+
+.pie h4 {
+  margin: 0 0 16px;
+  color: var(--mostaza);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.pie li + li {
+  margin-top: 6px;
+}
+
+.pie a {
+  text-decoration: none;
+}
+
+.pie a:hover {
+  color: var(--rojo);
+}
+
+.pie__legal {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 50px;
+  padding-top: 24px;
+  border-top: 1px solid var(--gris);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/*Tablet (≥ 601px)*/
+@media (min-width: 601px) {
+  .contenedor {
+    padding: 0 40px;
+  }
+
+  .seccion__cabeza {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .discos--4,
+  .discos--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .disco__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .disco__precio {
+    margin-top: 0;
+    white-space: nowrap;
+  }
+
+  .evento {
+    grid-template-columns: 100px 1fr auto;
+    grid-template-areas: "fecha info accion";
+    align-items: center;
+  }
+
+  .evento__fecha strong {
+    font-size: 48px;
+  }
+
+  .evento__info h3 {
+    font-size: 30px;
+  }
+
+  .cifras {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cifra + .cifra {
+    border-top: 0;
+  }
+
+  .cifra:nth-child(odd) {
+    border-right: var(--borde);
+  }
+
+  .cifra:nth-child(n + 3) {
+    border-top: var(--borde);
+  }
+
+  .equipo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fila-campos {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .pie__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pie__marca {
+    grid-column: 1 / -1;
+  }
+
+  .pie__legal {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/*Escritorio (≥ 901px)*/
+@media (min-width: 901px) {
+  h1 {
+    font-size: 90px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  .encabezado__barra {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 20px;
+  }
+
+  .menu {
+    gap: 26px;
+  }
+
+  .seccion {
+    padding: 70px 0;
+  }
+
+  .cabecera {
+    padding: 60px 0 40px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .hero h1 {
+    font-size: 100px;
+  }
+
+  .discos--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .cafe {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cafe__intro,
+  .cafe__carta {
+    padding: 50px 50px;
+  }
+
+  .destacado {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .destacado__afiche img {
+    height: 100%;
+  }
+
+  .destacado__texto {
+    align-self: center;
+    padding: 40px 36px;
+  }
+
+  .catalogo {
+    grid-template-columns: 220px 1fr;
+    gap: 50px;
+  }
+
+  .filtros {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .ficha {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 50px;
+  }
+
+  .ficha h1 {
+    font-size: 66px;
+  }
+
+  .ficha__precio {
+    font-size: 48px;
+  }
+
+  .historia {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+
+  .cifras {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .cifra:nth-child(n) {
+    border-top: 0;
+    border-right: var(--borde);
+  }
+
+  .cifra:last-child {
+    border-right: 0;
+  }
+
+  .equipo {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contacto {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 60px;
+  }
+
+  .pie__grid {
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  }
+
+  .pie__marca {
+    grid-column: auto;
+  }
+}
