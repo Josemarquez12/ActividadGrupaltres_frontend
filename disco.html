@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disco del mes · Surco</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor encabezado__barra">
+      <a class="logo" href="index.html">Surco<span>.</span></a>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a class="activo" href="disco.html" aria-current="page">Disco del mes</a></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="cinta">Discos nuevos y usados · Café de origen · Música en vivo cada viernes</p>
+  </header>
+
+  <main>
+    <section class="seccion">
+      <div class="contenedor ficha">
+        <div class="ficha__portada">
+          <img src="imagenes/tinto-doble.jpg" alt="Portada de Tinto doble de Los Cafeteros del Ruido" width="600" height="600">
+        </div>
+        <div class="ficha__detalle">
+          <p class="antetitulo">Disco del mes · Octubre</p>
+          <h1>Tinto doble</h1>
+          <p class="ficha__artista">Los Cafeteros del Ruido</p>
+          <p class="ficha__precio">$120.000</p>
+          <p class="ficha__descripcion">El segundo disco de la banda armeniana más ruidosa del Eje. Guitarras sucias, letras sobre madrugar a coger café y un cierre de seis minutos que suena mejor en vinilo.</p>
+          <a class="boton" href="contacto.html">Apartar en tienda</a>
+          <dl class="datos">
+            <div><dt>Formato</dt><dd>LP 12" · 180 g</dd></div>
+            <div><dt>Año</dt><dd>2026</dd></div>
+            <div><dt>Sello</dt><dd>Guadua Records</dd></div>
+            <div><dt>Estado</dt><dd>Nuevo</dd></div>
+          </dl>
+          <h3>Lado A</h3>
+          <ol class="canciones">
+            <li><span class="num">01</span><span>Tinto doble</span><span class="duracion">3:42</span></li>
+            <li><span class="num">02</span><span>Madrugada en la 14</span><span class="duracion">4:10</span></li>
+            <li><span class="num">03</span><span>Guayacán</span><span class="duracion">3:05</span></li>
+            <li><span class="num">04</span><span>El bus de las 6</span><span class="duracion">4:33</span></li>
+          </ol>
+          <h3>Lado B</h3>
+          <ol class="canciones">
+            <li><span class="num">01</span><span>Neblina en Filandia</span><span class="duracion">5:01</span></li>
+            <li><span class="num">02</span><span>Pase lo que pase</span><span class="duracion">3:28</span></li>
+            <li><span class="num">03</span><span>Bahareque</span><span class="duracion">3:56</span></li>
+            <li><span class="num">04</span><span>Vuelvo al pueblo</span><span class="duracion">6:12</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion--linea">
+      <div class="contenedor">
+        <div class="seccion__cabeza">
+          <h2>Si te gusta este...</h2>
+        </div>
+        <div class="discos discos--4">
+        <article class="disco">
+          <a href="disco.html"><img src="imagenes/ruta-29.jpg" alt="Portada de Ruta 29 de Motel Quimbaya" width="400" height="400"></a>
+          <div class="disco__info">
+            <div>
+              <h3 class="disco__titulo">Ruta 29</h3>
+              <p class="disco__artista">Motel Quimbaya</p>
+            </div>
+            <p class="disco__precio">$115.000</p>
+          </div>
+        </article>
+        <article class="disco">
+          <a href="disco.html"><img src="imagenes/descarga-calarca.jpg" alt="Portada de Descarga en Calarcá de Chucho Salsa Club" width="400" height="400"></a>
+          <div class="disco__info">
+            <div>
+              <h3 class="disco__titulo">Descarga en Calarcá</h3>
+              <p class="disco__artista">Chucho Salsa Club</p>
+            </div>
+            <p class="disco__precio">$145.000</p>
+          </div>
+        </article>
+        <article class="disco">
+          <a href="disco.html"><img src="imagenes/bambu-fm.jpg" alt="Portada de Bambú FM de Sonido Guadua" width="400" height="400"></a>
+          <div class="disco__info">
+            <div>
+              <h3 class="disco__titulo">Bambú FM</h3>
+              <p class="disco__artista">Sonido Guadua</p>
+            </div>
+            <p class="disco__precio">$105.000</p>
+          </div>
+        </article>
+        <article class="disco">
+          <a href="disco.html"><img src="imagenes/salento-5am.jpg" alt="Portada de Salento 5 a.m. de Neblina" width="400" height="400"></a>
+          <div class="disco__info">
+            <div>
+              <h3 class="disco__titulo">Salento 5 a.m.</h3>
+              <p class="disco__artista">Neblina</p>
+            </div>
+            <p class="disco__precio">$110.000</p>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__grid">
+        <div class="pie__marca">
+          <a class="logo" href="index.html">Surco<span>.</span></a>
+          <p>Discos y café desde 2014.<br>Carrera 14 #18-32, Armenia, Quindío.</p>
+        </div>
+        <div>
+          <h4>Tienda</h4>
+          <ul>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="disco.html">Disco del mes</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Surco</h4>
+          <ul>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Redes</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Spotify</a></li>
+            <li><a href="#">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pie__legal">
+        <p>© 2026 Surco Discos &amp; Café</p>
+        <p>Proyecto de práctica · ADSO SENA</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
